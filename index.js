@@ -9,7 +9,7 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-const nft_collection = [];
+const nfts = [];
 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
@@ -20,7 +20,7 @@ function mintNFT(name, owner, date) {
        "owner": owner,
        "minted on": date
     }
-    nft_collection.push(NFT);
+    nfts.push(NFT);
 }
 
 
@@ -29,15 +29,15 @@ function mintNFT(name, owner, date) {
 function listNFTs() {
     console.log("List of the minted NFT's:")
     let i;
-    let j = nft_collection.length;
+    let j = nfts.length;
     for (i = 0; i < j; i++) {
-        console.log(nft_collection[i])
+        console.log(nfts[i])
     }
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-    console.log("Total minted nft = " + nft_collection.length)
+    console.log("Total minted nft = " + nfts.length)
 }
 
 mintNFT("Yogesh's", "Yogesh Rajput", "02/06/2024");
